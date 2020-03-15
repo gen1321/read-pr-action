@@ -1,0 +1,11 @@
+name: 'Get PR info'
+description: 'it get pr body'
+outputs:
+  body: # id of output
+    description: 'your pr body'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.github_token }}
+    - ${{ inputs.pr_number }}
